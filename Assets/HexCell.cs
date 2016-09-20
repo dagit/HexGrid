@@ -4,4 +4,5 @@ using System.Collections;
 public class HexCell : MonoBehaviour {
 	public HexCoordinates coordinates;
     public Color color;
+    public int textureIdx;
 }

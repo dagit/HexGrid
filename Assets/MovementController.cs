@@ -13,15 +13,22 @@ public class MovementController : MonoBehaviour {
     [SerializeField]
     float sensitivityY = 500f;
     [SerializeField]
-    float walkSpeed = 10f;
+    float walkSpeed = 20f;
 
     float clampAngle = 90.0f;
 
     bool mouseLock = false;
 
+    [SerializeField]
+    GameObject cube = null;
+
+    [SerializeField]
+    Sprite sprite = null;
+
     void Start()
     {
         transform.position = Camera.main.transform.position;
+
     }
 
     // Update is called once per frame

@@ -34,11 +34,11 @@ public struct HexCoordinates {
 		return new HexCoordinates (x - z / 2, z);
 	}
 
-    public static HexCoordinates FromPosition(Vector3 position)
+    public static HexCoordinates FromPosition(HexMetrics hexMetrics, Vector3 position)
     {
-        float x = position.x / (HexMetrics.innerRadius * 2f);
+        float x = position.x / (hexMetrics.innerRadius * 2f);
         float y = -x;
-        float offset = position.z / (HexMetrics.outerRadius * 3f);
+        float offset = position.z / (hexMetrics.outerRadius * 3f);
         x -= offset;
         y -= offset;
 
